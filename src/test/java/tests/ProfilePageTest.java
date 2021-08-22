@@ -19,7 +19,7 @@ public class ProfilePageTest extends TestBase {
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void verifyTopCardInfoNavigationTabs() {
 
         loginPage.login(loginTestData.userLoginEmail, loginTestData.userLoginPassword);

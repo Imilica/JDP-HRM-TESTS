@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
 
+import java.util.concurrent.TimeUnit;
+
 public class WaitHelper {
 
 
@@ -79,6 +81,17 @@ public class WaitHelper {
             return false;
         }
 
+
+    }
+
+    public Boolean driverWait(WebDriver driver, long time) {
+        try {
+//            driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+            Thread.sleep(time);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
 
     }
 

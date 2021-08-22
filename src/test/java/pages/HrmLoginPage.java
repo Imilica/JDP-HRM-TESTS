@@ -112,7 +112,7 @@ public class HrmLoginPage extends TestBase {
     public void clickOnLoginButton() {
         waitHelper.waitUntilElementIsVisible(driver, By.className("hrmLogin__login-btn"), 30);
         waitHelper.waitUntilElementIsClickable(driver, By.className("hrmLogin__login-btn"), 30);
-
+        waitHelper.driverWait(driver,1000);
         loginButton.click();
     }
 
