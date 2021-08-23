@@ -23,7 +23,7 @@ public class LoginTest extends TestBase {
     public void verifyLoginWithInvalidEmail() {
 
         loginPage.clickOnLoginButton();
-        utils.switchToMainWindowHandler();
+        utils.switchToNewWindow();
 
         loginPage.setEmail(loginTestData.invalidLoginEmail);
         waitHelper.waitUntilValueContains(driver, loginPage.userEmail, 5, loginTestData.invalidLoginEmail);
@@ -40,7 +40,7 @@ public class LoginTest extends TestBase {
     public void verifyLoginWithInvalidPassword() {
 
         loginPage.clickOnLoginButton();
-        utils.switchToMainWindowHandler();
+        utils.switchToNewWindow();
 
         loginPage.setEmail(loginTestData.userLoginEmail);
         waitHelper.waitUntilValueContains(driver, loginPage.userEmail, 5, loginTestData.userLoginEmail);

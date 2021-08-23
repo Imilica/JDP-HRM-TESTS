@@ -19,7 +19,7 @@ public class LoginTestData {
         userLoginEmail = System.getenv(EMAIL_KEY);
         userLoginPassword = System.getenv(PASSWORD_KEY);
 
-        invalidLoginEmail = "invalid"  + userLoginEmail;
-        invalidLoginPassword = "invalid"  + userLoginPassword;
+        invalidLoginEmail = "invalid" + userLoginEmail;
+        invalidLoginPassword = "invalid" + userLoginPassword;
     }
 }

@@ -1,5 +1,8 @@
 package pages;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import tests.TestBase;
 
 public class UtilsPage extends TestBase {
@@ -11,7 +14,7 @@ public class UtilsPage extends TestBase {
 
     }
 
-    public void switchToMainWindowHandler() {
+    public void switchToNewWindow() {
 
         System.out.println("main window handler: " + mainWindow);
 
@@ -24,5 +27,13 @@ public class UtilsPage extends TestBase {
         driver.switchTo().window(mainWindow);
     }
 
+    public void actionsClick(WebElement element) {
+        Actions ob = new Actions(driver);
+        ob.moveToElement(element);
+        ob.click(element);
+        Action action = ob.build();
+        action.perform();
+
+    }
 
 }
