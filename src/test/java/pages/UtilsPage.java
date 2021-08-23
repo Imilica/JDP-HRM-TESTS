@@ -2,8 +2,6 @@ package pages;
 
 import tests.TestBase;
 
-import java.util.Set;
-
 public class UtilsPage extends TestBase {
 
     String mainWindow = driver.getWindowHandle();

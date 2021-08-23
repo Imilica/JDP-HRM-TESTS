@@ -35,7 +35,6 @@ public class QuickMenu extends TestBase {
     public void clickOnLogoutButton() {
         waitHelper.waitUntilElementIsVisible(driver, logoutButton, 10);
         waitHelper.waitUntilElementIsClickable(driver, logoutButton, 10);
-        //is present
         logoutButton.click();
 
     }

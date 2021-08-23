@@ -36,9 +36,6 @@ public class HrmEmployeesPage extends TestBase {
     @FindBy(css = ".cdk-overlay-backdrop")
     WebElement overlay;
 
-    //  @FindBy(id = "mat-input-15")
-    // public WebElement searchField;
-
     @FindBy(css = "[placeholder=\"Search employee\"]")
     public WebElement searchField;
 
