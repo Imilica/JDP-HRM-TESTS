@@ -50,16 +50,16 @@ public class HrmLoginPage extends TestBase {
         PageFactory.initElements(driver, this);
     }
 
-    private boolean IsEmailSaved(){
-        return  driver.findElements(By.className("WBW9sf")).size() > 0;
+    private boolean IsEmailSaved() {
+        return driver.findElements(By.className("WBW9sf")).size() > 0;
     }
 
-    private void loginWithSavedEmail(){
+    private void loginWithSavedEmail() {
         this.clickOnSavedEmail();
         utils.switchToMainWindow();
     }
 
-    private void  loginWithNewUser(String email, String password){
+    private void loginWithNewUser(String email, String password) {
         this.setEmail(email);
         waitHelper.waitUntilValueContains(driver, userEmail, 5, email);
 
@@ -72,6 +72,7 @@ public class HrmLoginPage extends TestBase {
         utils.switchToMainWindow();
         this.waitUntilLoginButtonIsNotPresent();
     }
+
     public void login(String email, String password) {
 
         this.clickOnLoginButton();
@@ -79,14 +80,14 @@ public class HrmLoginPage extends TestBase {
 
         if (IsEmailSaved()) {
             loginWithSavedEmail();
-        }else{
-            loginWithNewUser(email,password);
+        } else {
+            loginWithNewUser(email, password);
         }
 
         waitHelper.waitUntilElementIsVisible(driver, By.cssSelector(".mat-menu-trigger.status-menu__button"), 20);
 
         // In case checkout reminder popup is shown also close that one
-        if(driver.findElements(By.className("checkout-reminder__button--close")).size() > 0){
+        if (driver.findElements(By.className("checkout-reminder__button--close")).size() > 0) {
             checkoutReminderClose.click();
         }
     }
@@ -112,7 +113,7 @@ public class HrmLoginPage extends TestBase {
     public void clickOnLoginButton() {
         waitHelper.waitUntilElementIsVisible(driver, By.className("hrmLogin__login-btn"), 30);
         waitHelper.waitUntilElementIsClickable(driver, By.className("hrmLogin__login-btn"), 30);
-        waitHelper.driverWait(driver,1000);
+        waitHelper.driverWait(driver, 1000);
         loginButton.click();
     }
 
